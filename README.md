@@ -12,10 +12,19 @@ and head orientation, then displays a risk score and visual alerts.
   on the video feed.
 - Displays a risk score and an on-screen warning when the alert is active.
 
-## Entry point
+## Setup and run on Windows
 
-Run `python app.py` from the project directory after setting up
-the project's dependencies.
+Use 64-bit Python 3.12 and a webcam. This project uses MediaPipe's legacy
+Solutions API. Keep `app.py`, `face_detector.py`, and `landmark_detector.py`
+in the same directory.
+
+From the project directory, run:
+
+```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install "mediapipe==0.10.21" "opencv-contrib-python==4.11.0.86" "numpy==1.26.4"
+.\.venv\Scripts\python.exe app.py
+```
 
 - `n` — toggle facial landmark overlays.
 - `q` — quit the application.
